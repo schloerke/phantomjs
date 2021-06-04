@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: i686_windows_gcc_phantomjs_bin
-        path: ./bin
+        path: ./

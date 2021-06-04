@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: amd64_linux_clang_phantomjs_bin
-        path: ./bin
+        path: ./

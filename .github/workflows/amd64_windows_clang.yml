@@ -42,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: amd64_windows_clan_phantomjs_bin
-        path: ./bin
+        path: ./
