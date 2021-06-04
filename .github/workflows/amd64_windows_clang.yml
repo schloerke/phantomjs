@@ -9,6 +9,7 @@ jobs:
     env:
       CC: clang
       CXX: clang++
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
     - uses: actions/checkout@v2
     - run: echo "::add-path::C:\\msys64\\usr\\bin"
