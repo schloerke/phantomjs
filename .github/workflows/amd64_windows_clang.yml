@@ -1,6 +1,13 @@
 name: amd64_windows_clang
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
 
 jobs:
 
@@ -30,3 +37,9 @@ jobs:
     - run: file ./bin/phantomjs
     - run: ldd ./bin/phantomjs
     - run: ./bin/phantomjs --version
+
+    - name: Upload binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: amd64_windows_clan_phantomjs_bin
+        path: ./bin

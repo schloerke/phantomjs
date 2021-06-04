@@ -1,6 +1,12 @@
 name: amd64_linux_clang
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
 
@@ -18,3 +24,9 @@ jobs:
     - run: file ./bin/phantomjs
     - run: ./bin/phantomjs --version
     - run: make check
+
+    - name: Upload binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: amd64_linux_clang_phantomjs_bin
+        path: ./bin
